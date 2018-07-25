@@ -1,0 +1,23 @@
+BasicJAVADoc
+1.Square of a supplied Number
+2.Armstrong Number
+3.Rang Armstrong 100-999
+4.Simple and compound interest
+5.Marks and result
+6.Income Tax Calculation on CTC
+7.Display Date in a format
+8.Login 
+9.Searching an elememnt in Array
+10.Sorting an array
+11.Marks, Total and Average
+12.Classes,Function,Field..
+BasicJAVAtxt
+1.Palindrome
+2.Reverese each word in a sentence
+3.Identify palindrome and sort
+4.missing number
+5.name search in array
+6.remove duplicate characters
+7.remove extra spaces and delete particular word
+8.searching an element in multidimensional array
+9.discount calculator
