@@ -5,18 +5,18 @@ class interest
 	{
 		Scanner sc= new Scanner(System.in);
 		System.out.println("Enter principle amount");
-		int p = sc.nextInt();
+		int principalAmount = sc.nextInt();
 		System.out.println("Enter rate of interest");
-		float r = sc.nextFloat();
+		float rateOfInterest = sc.nextFloat();
 		System.out.println("Enter number of years");
-		int n = sc.nextInt();
-		double s,c,a;
-		s = (double)(p*n*r)/100;
-		a = (double)p*Math.pow((1f+r/100f),n);
-		c = a - p;
+		int numberOfYears = sc.nextInt();
+		double simpleInterest,compoundInterest,amount;
+		simpleInterest = (double)(principal*numberOfYears*rateOfInterest)/100;
+		amount = (double)principalAmount*Math.pow((1f+rateOfInterest/100f),numberOfYears);
+		compondInterest = amount - principalAmount;
 		System.out.println("Simple Interest");
-		System.out.println(s);
+		System.out.println(simpleInterest);
 		System.out.println("Compound Interest");
-		System.out.println(c);
+		System.out.println(compounfInterest);
 	}
 }
