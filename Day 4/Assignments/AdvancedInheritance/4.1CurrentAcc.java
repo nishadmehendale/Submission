@@ -1,4 +1,4 @@
-
+//Class CurrentAcc extending BankAcc
 public abstract class CurrentAcc extends BankAcc{
 	private final float creditLimit = 10000f;
 	
