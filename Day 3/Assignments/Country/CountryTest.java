@@ -3,6 +3,7 @@ public class CountryTest {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		//Accepting input
 		System.out.println("Enter number of countries");
 		int num = sc.nextInt();
 		Country[] country = new Country[num];
@@ -18,10 +19,13 @@ public class CountryTest {
 			country[i].setArea(area);
 			country[i].setPopulation(population);
 		}
+		//Finding and printing country with largest area
 		int index = country[0].largestArea(country);
 		System.out.println("Country with largest area is " + country[index]);
+		//Finding and printing country with largest population
 		index = country[0].largestPopulation(country);
 		System.out.println("Country with largest population is " + country[index]);
+		//Finding and printing country with largest density
 		index = country[0].largestDensity(country);
 		System.out.println("Country with largest density is " + country[index]);
 	}
