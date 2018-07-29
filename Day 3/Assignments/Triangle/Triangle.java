@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 //Class Triangle that checks the type of the triangle
 public class Triangle {
 	private int[] side=new int[3];
