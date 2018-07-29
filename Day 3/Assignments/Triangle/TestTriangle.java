@@ -27,7 +27,7 @@ public class TestTriangle {
 			else if(triangle[i].isEquilateral(triangle[i])){
 				System.out.println("Triangle is equilateral");
 			}
-			else if(triangle[i].isIsosceles(triangle[i]){
+			else if(triangle[i].isIsosceles(triangle[i])){
 				System.out.println("Triangle is isosceles");
 			}
 		}			
