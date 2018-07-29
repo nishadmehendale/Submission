@@ -1,3 +1,4 @@
+//Class Vehicle that has basic vehicle properties
 public class Vehicle {
 
 	private int speed;
