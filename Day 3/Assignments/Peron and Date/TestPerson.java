@@ -1,4 +1,4 @@
-
+//Class test person to check functioning of class person
 public class TestPerson {
 
 	public static void main(String[] args) {
@@ -9,4 +9,4 @@ public class TestPerson {
 		shyam.olderOne(ram);
 	}
 
-}
+}  
