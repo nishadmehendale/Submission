@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 
+//Class person that has basic personal details
 public class Person {
 	private String name;
 	private Date dob;
@@ -9,6 +10,7 @@ public class Person {
 		name = n;
 		dob = new Date(d,m,y); 
 	}
+	//Method display to display details of a person
 	public void display()
 	{
 		int [] difference = new int[3];
@@ -17,6 +19,7 @@ public class Person {
 		difference = dob.age();
 		System.out.println("Age: " + difference[2] + " Years, " + difference[1] + " Months, " + difference[0] + " Days ");
 	}
+	//Method to check if a person is older than the other
 	public void olderOne(Person p) {
 		int [] difference = new int[3];
 		if(dob.isSmaller(p.dob))
@@ -29,7 +32,5 @@ public class Person {
 			difference = p.dob.diff(dob);
 			System.out.println(this.name +"is older than " + p.name + " by " + + difference[2] + " Years, " + difference[1] + " Months, " + difference[0] + " Days ");
 		}
-	}
-	
-	
+	}	
 }
