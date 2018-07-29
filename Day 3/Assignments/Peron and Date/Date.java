@@ -1,4 +1,6 @@
-import java.time.*;
+mport java.time.*;
+//Class date that calculates age,date difference and checks if a date is smaller
+//Here Method to calculate age is added 
 public class Date {
 	private int d,m,y;
 	
@@ -13,7 +15,7 @@ public class Date {
 	public String toString() {
 		return "Date " + this.d + " / " + this.m +  " / " + this.y + "";
 	}
-	
+	//Method that finds if the given date is smaller than input date
 	public boolean isSmaller(Date d) {
 		boolean flag;
 		if(this.y == d.y)
@@ -51,7 +53,8 @@ public class Date {
 		}
 		return flag;
 		}
-	public int[] diff(Date d) {
+		//Method that calulates difference between two dates
+		public int[] diff(Date d) {
 		int []date= new int[3];
 		LocalDate d1,d2;
 		Period p;
@@ -87,6 +90,7 @@ public class Date {
 		date[0] = p.getDays();
 		return date;
 	}
+	//Method that Calcultes age of a person
 	public int[] age(){
 		int []date= new int[3];
 		LocalDate d1,d2= LocalDate.now();
