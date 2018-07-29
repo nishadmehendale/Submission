@@ -1,4 +1,4 @@
-
+//Class country having countryname, area and population
 public class Country {
 	private String countryName;
 	private double area;
@@ -21,7 +21,7 @@ public class Country {
 	public void setPopulation(double population) {
 		this.population = population;
 	}
-	
+	//Method to calculate country with largest area
 	public int largestArea(Country C[]) {
 		int index = 0;
 		double largest = 0;
@@ -33,7 +33,7 @@ public class Country {
 		}
 		return index;
 	}
-	
+	//method to calculate country with largest population
 	public int largestPopulation(Country C[]) {
 		int index = 0;
 		double largest = 0;
@@ -45,7 +45,7 @@ public class Country {
 		}
 		return index;
 	}
-	
+	//method to calculate country with largest density
 	public int largestDensity(Country C[]) {
 		int index = 0;
 		double largest = 0;
@@ -60,7 +60,5 @@ public class Country {
 	@Override
 	public String toString() {
 		return "Country [countryName=" + countryName + ", area=" + area + ", population=" + population + "]";
-	}
-	
-	
+	}	
 }
