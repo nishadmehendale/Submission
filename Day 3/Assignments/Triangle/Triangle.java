@@ -1,4 +1,4 @@
-
+//Class triangle which checks type of a triangle 
 public class Triangle {
 	private double side1;
 	private double side2;
@@ -27,7 +27,8 @@ public class Triangle {
 	public void setSide3(double side3) {
 		this.side3 = side3;
 	}
-
+	
+	//Method to check the Type of Triangle
 	public int[] checkType(Triangle triangle[]) {
 		int type[], i;
 		type = new int[triangle.length];
