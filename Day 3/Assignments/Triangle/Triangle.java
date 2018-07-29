@@ -1,54 +1,56 @@
-//Class triangle which checks type of a triangle 
+//Class Triangle that checks the type of the triangle
 public class Triangle {
-	private double side1;
-	private double side2;
-	private double side3;
+	private int[] side=new int[3];
 
-	public double getSide1() {
-		return side1;
+	public int[] getSide() {
+		return side;
 	}
 
-	public void setSide1(double side1) {
-		this.side1 = side1;
-	}
-
-	public double getSide2() {
-		return side2;
-	}
-
-	public void setSide2(double side2) {
-		this.side2 = side2;
-	}
-
-	public double getSide3() {
-		return side3;
-	}
-
-	public void setSide3(double side3) {
-		this.side3 = side3;
+	public void setSide(int[] side) {
+		this.side = side;
 	}
 	
-	//Method to check the Type of Triangle
-	public int[] checkType(Triangle triangle[]) {
-		int type[], i;
-		type = new int[triangle.length];
-		for (i = 0; i < triangle.length; i++)
-			type[i] = 0;
-		for (i = 0; i < triangle.length; i++) {
-			if (triangle[i].getSide1() == triangle[i].getSide2() && triangle[i].getSide1() == triangle[i].getSide3())
-				type[i] = 1;
-			else if(triangle[i].getSide1() == triangle[i].getSide2() || triangle[i].getSide3() == triangle[i].getSide2()
-					|| triangle[i].getSide1() == triangle[i].getSide3())
-				type[i] = 2;
-			else{
-				double square1 = side1 * side1;
-				double square2 = side2 * side2;
-				double square3 = side3 * side3;
-				if (square1 == (square2 + square3) || square2 == (square1 + square3) || square3 == (square2 + square1))
-					type[i] = 3;
-			}
-		}
-		return type;
-
+	//Method to check if a triangle is right angled triangle
+	public boolean isRight(Triangle T)
+	{
+		int sideSquare1=T.side[0]*T.side[0];
+		int sideSquare2=T.side[1]*T.side[1];
+		int sideSquare3=T.side[2]*T.side[2];
+		
+		if((sideSquare1==sideSquare2+sideSquare3) || (sideSquare2==sideSquare1+sideSquare3) || (sideSquare3==sideSquare1+sideSquare2))
+			return true;
+		else
+			return false;
 	}
+	//Method to check if a triangle is scalene
+	public boolean isScalene(Triangle T)
+	{
+		if(T.side[0]!=T.side[1] && T.side[1]!=T.side[2]  && T.side[2]!=T.side[0])
+			return true;
+		else
+			return false;
+	}
+	
+	//Method to check if a triangle is iscosceles
+	public boolean isIsosceles(Triangle T)
+	{
+		if(T.side[0]==T.side[1] || T.side[1]==T.side[2]  || T.side[2]==T.side[0])
+			return true;
+		else
+			return false;
+	}
+	
+	//method to check if a triangle is equilateral
+	public boolean isEquilateral(Triangle T)
+	{
+		if(T.side[0]==T.side[1] && T.side[1]==T.side[2]  && T.side[2]==T.side[0])
+			return true;
+		else
+			return false;
+	}
+
+	@Override
+	public String toString() {
+		return "Triangle [side=" + Arrays.toString(side) + "]";
+	}	
 }
