@@ -1,5 +1,4 @@
-
-
+//Class Television that has basic television operations
 public class Television {
 
 	private boolean state;
@@ -19,9 +18,15 @@ public class Television {
 	public int getCurrentVolume() {
 		return currentVolume;
 	}
+	//Method to change current volume 
 	public void setCurrentVolume(int currentVolume) {
 		if(currentVolume >= 0 && currentVolume <= 100)
 			this.currentVolume = currentVolume;
+	}
+	//Method to change current channel 
+	public void setCurrentChannel(int currentChannel) {
+		if(currentChannel >= 100 && currentChannel <= 999)
+			this.currentChannel = currentChannel;
 	}
 	public int getCurrentChannel() {
 		return currentChannel;
@@ -37,9 +42,6 @@ public class Television {
 		return "Television [isState() "+ isState() +" currentVolume=" + currentVolume + ", currentChannel=" + currentChannel
 				+ ", getCurrentVolume()=" + getCurrentVolume() + ", getCurrentChannel()=" + getCurrentChannel() + "]";
 	}
-	public void setCurrentChannel(int currentChannel) {
-		if(currentChannel >= 100 && currentChannel <= 999)
-			this.currentChannel = currentChannel;
-	}
+	
 	
 }
